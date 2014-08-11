@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModeShift</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/vendor/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/application.css" />
+
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script src="js/vendor/jquery.fullPage.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="fullpage">
+      <div class="section">
+        <div class="row">
+          <div class="small-8 large-6 small-centered columns">
+            <h1>Where do you work?</h1>
+            <select name="employer">
+              <option value="spectrum">Spectrum Health</option>
+              <option value="gvsu">GVSU</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="row">
+          <div class="small-8 large-6 small-centered columns">
+            <h1>Tell us about yourself</h1>
+            <input placeholder="Full Name" name="name" type="text"></input>
+            <input placeholder="Email" name="email" type="email"></input>
+            <input placeholder="Home Address" name="address" type="text"></input>
+            <div class="row collapse">
+              <div class="small-10 columns">
+                <input placeholder="City" name="city" type="text"></input>
+              </div>
+              <div class="small-2 columns">
+                <span class="postfix">Michigan</span>
+              </div>
+            </div>
+            <a href="#mode" class="button expand">That's me!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="mode">
+        <div class="row">
+          <div class="small-10 large-8 small-centered columns">
+            <h1>How did you commute today?</h1>
+            <div class="mode-icons">
+              <div class="row">
+                <div class="small-12 large-4 columns">
+                  <input type="radio" name="mode" class="mode-radio" value="bus" id="bus">
+                  <label for="bus" class="map-icon-bus-station"></label>
+                </div>
+
+                <div class="small-12 large-4 columns">
+                  <input type="radio" name="mode" class="mode-radio" value="bike" id="bike">
+                  <label for="bike" class="map-icon-bicycling">
+                </div>
+
+                <div class="small-12 large-4 columns">
+                  <input type="radio" name="mode" class="mode-radio" value="walk" id="walk">
+                  <label for="walk" class="map-icon-walking">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/foundation.min.js"></script>
+    <script>
+       $(document).foundation();
+
+       $(document).ready(function() {
+           $('#fullpage').fullpage({
+             verticalCentered: true,
+             sectionsColor : ['#00BA56', '#0670A9', '#8AB49D', '#8AB49D']
+           });
+       });
+    </script>
+  </body>
+</html>

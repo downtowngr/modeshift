@@ -1,0 +1,60 @@
+/* Map icons */
+@font-face {
+	font-family: 'map-icons';
+	src:url('../fonts/map-icons.eot');
+	src:url('../fonts/map-icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/map-icons.woff') format('woff'),
+		url('../fonts/map-icons.ttf') format('truetype'),
+		url('../fonts/map-icons.svg#map-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.map-icon-bus-station, .map-icon-bicycling, .map-icon-walking {
+	font-family: 'map-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.map-icon-bus-station:before {
+	content: "\e072";
+}
+.map-icon-walking:before {
+	content: "\e0ae";
+}
+.map-icon-bicycling:before {
+	content: "\e0af";
+}
+
+/* visually hide the default radio button */
+.mode-radio {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* make the label relative, add padding to the left for adding the custom radio button */
+.mode-radio+label {
+}
+/* :before will be our new button! */
+.mode-radio+label:before {
+  color: #fff;
+  font-size: 700%;
+}
+.mode-radio:checked+label:before {
+  color: #333;
+}
+
+h1 {
+  font-size: 300%;
+  color: #fff;
+  line-height: 150%;
+  font-family: "Lato", sans-serif;
+}
