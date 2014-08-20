@@ -39,9 +39,14 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
-/* make the label relative, add padding to the left for adding the custom radio button */
-.mode-radio+label {
+  color: #fff;
+
+  -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .2s ease-out, background 1s ease-in;
 }
 /* :before will be our new button! */
 .mode-radio+label:before {
@@ -49,6 +54,9 @@
   font-size: 700%;
 }
 .mode-radio:checked+label:before {
+  color: #333;
+}
+.mode-radio:hover {
   color: #333;
 }
 
