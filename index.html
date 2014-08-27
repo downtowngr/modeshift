@@ -1,89 +1,72 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ModeShift</title>
+---
+layout: default
+---
 
-    <link href='//fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/vendor/jquery.fullPage.css" />
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/application.css" />
+<form id="modeshift" method="get">
+<div id="fullpage">
 
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-    <script src="js/vendor/jquery.fullPage.min.js"></script>
-    <script src="js/vendor/jquery.validate.min.js"></script>
-    <script src="js/application.js"></script>
-  </head>
-
-  <body>
-    <form id="modeshift" method="get">
-
-    <div id="fullpage">
-      <div class="section">
-        <div class="row">
-          <div class="small-8 large-6 small-centered columns">
-            <h1>Where do you work?</h1>
-            <select id="employer" name="employer">
-              <option value="null"></option>
-              <option value="spectrum">Spectrum Health</option>
-              <option value="gvsu">GVSU</option>
-              <option value="st-marys">St Mary's</option>
-              <option value="msu">MSU</option>
-            </select>
-          </div>
-        </div>
+  <div class="section">
+    <div class="row">
+      <div class="small-8 large-6 small-centered columns">
+        {% include destination.html %}
       </div>
+    </div>
+  </div>
 
-      <div class="section">
-        <div class="row">
-          <div class="small-8 large-6 small-centered columns">
-            <h1>Tell us about yourself</h1>
-            <input placeholder="Full Name" name="name" type="text" required></input>
-            <input placeholder="Email" name="email" type="email" required></input>
-            <input placeholder="Home Address" name="address" type="text" required></input>
-            <div class="row collapse">
-              <div class="small-10 columns">
-                <input placeholder="City" name="city" type="text" required></input>
-              </div>
-              <div class="small-2 columns">
-                <span class="postfix">Michigan</span>
-              </div>
-            </div>
-            <div id="mode-submit" class="button expand">That's me!</div>
-          </div>
+  <div class="section">
+    <div class="row">
+      <div class="small-8 large-6 small-centered columns">
+        <div class="slide text-center">
+          <h1>Do you typically drive there on Monday?</h1>
+          {% include yes_no.html day="monday" %}
         </div>
-      </div>
 
-      <div class="section" id="mode">
-        <div class="row">
-          <div class="small-10 large-8 small-centered columns">
-            <h1>How did you commute today?</h1>
-            <div class="mode-icons">
-              <div class="row">
-                <div class="small-12 large-4 columns">
-                  <input type="radio" name="mode" class="mode-radio" value="bus" id="bus">
-                  <label for="bus" class="map-icon-bus-station"></label>
-                </div>
+        <div class="slide text-center">
+          <h1>How about on Tuesday?</h1>
+          {% include yes_no.html day="tuesday" %}
+        </div>
 
-                <div class="small-12 large-4 columns">
-                  <input type="radio" name="mode" class="mode-radio" value="bike" id="bike">
-                  <label for="bike" class="map-icon-bicycling">
-                </div>
+        <div class="slide text-center">
+          <h1>Wednesday?</h1>
+          {% include yes_no.html day="wednesday" %}
+        </div>
 
-                <div class="small-12 large-4 columns">
-                  <input type="radio" name="mode" class="mode-radio" value="walk" id="walk">
-                  <label for="walk" class="map-icon-walking">
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="slide text-center">
+          <h1>Thursday?</h1>
+          {% include yes_no.html day="thursday" %}
+        </div>
+
+        <div class="slide text-center">
+          <h1>Friday?</h1>
+          {% include yes_no.html day="friday" %}
         </div>
       </div>
     </div>
+  </div>
 
-    </form>
-  </body>
-</html>
+  <div class="section">
+    <div class="row">
+      <div class="small-8 large-6 small-centered columns">
+        {% include about_yourself.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="small-10 large-8 small-centered columns">
+        {% include commute.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="small-10 large-8 small-centered columns">
+        <h1>You rock <span class="first-name"></span>!</h1>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+

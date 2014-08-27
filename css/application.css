@@ -28,6 +28,8 @@
 .map-icon-bicycling:before {
 	content: "\e0af";
 }
+.map-icon-skateboarding:before {
+}
 
 /* visually hide the default radio button */
 .mode-radio {
@@ -61,8 +63,10 @@
 }
 
 h1 {
-  font-size: 300%;
+  font-size: 250%;
   color: #fff;
-  line-height: 150%;
+  line-height: 100%;
   font-family: "Lato", sans-serif;
+  margin-bottom: 0.5em;
 }
+
