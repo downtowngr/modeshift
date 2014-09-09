@@ -13,7 +13,7 @@ submitToGoogle = ->
     success: (data, status) ->
       console.log(data)
       console.log(status)
-      $.fn.fullpage.moveTo(5, 0)
+      $.fn.fullpage.moveTo(6, 0)
   })
 
 window.submitToGoogle = submitToGoogle
@@ -22,8 +22,7 @@ $(document).ready ->
 
   $("#fullpage").fullpage({
       verticalCentered: true,
-      sectionsColor : ['#89A639', '#8AB269', '#8BBF98', '#8CCBC8', '#8DD7F7'],
-      css3: true,
+      sectionsColor : ['#89A639', '#8AB269', '#8BBF98', '#8CCBC8', '#8DD7F7', '#8DD7F7'],
       loopHorizontal: false
     })
 
@@ -51,6 +50,7 @@ $(document).ready ->
     $.fn.fullpage.moveTo(4, 0)
 
   $(".mode-radio").change ->
+    $.fn.fullpage.moveTo(5, 0)
     submitToGoogle()
 
   $("[name=first_name]").keyup ->

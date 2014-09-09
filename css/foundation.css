@@ -153,6 +153,11 @@ select {
   float: left; }
 
 @media only screen {
+  body,
+  html {
+    font-size: 12px;
+  }
+
   .small-push-0 {
     position: relative;
     left: 0%;
@@ -383,6 +388,11 @@ select {
   .columns.small-uncentered.opposite {
     float: right; } }
 @media only screen and (min-width: 40.063em) {
+  body,
+  html {
+    font-size: 14px;
+  }
+
   .medium-push-0 {
     position: relative;
     left: 0%;
@@ -733,6 +743,11 @@ select {
     right: 91.66667%;
     left: auto; } }
 @media only screen and (min-width: 64.063em) {
+  body,
+  html {
+    font-size: 16px;
+  }
+
   .large-push-0 {
     position: relative;
     left: 0%;
