@@ -1,6 +1,8 @@
 ---
 ---
 
+window.navigator.standalone = true
+
 submitToGoogle = ->
   url  = "https://script.google.com/macros/s/AKfycbyX1bKsGXzeUkNO-1Ma2WlqtmBT2WM4-4XpqG0RuMKhSN03408/exec"
 
