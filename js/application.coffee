@@ -67,3 +67,4 @@ $(document).ready ->
     $.removeCookie("modeshift")
     $("#modeshift").get(0).reset()
     $.fn.fullpage.moveTo(1, 0)
+    $(".first-name").val("")
